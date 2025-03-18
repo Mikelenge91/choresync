@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base typography */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gray-300 text-gray-800 font-sans antialiased;
+}
+
+/* Headings */
+h1 {
+  @apply text-3xl font-bold text-gray-900;
+}
+
+h2 {
+  @apply text-2xl font-semibold text-gray-800;
+}
+
+h3 {
+  @apply text-xl font-medium text-gray-700;
+}
+
+/* Buttons */
+button {
+  @apply px-4 py-2 rounded-lg transition-all duration-300;
+}
+
+button.primary {
+  @apply bg-blue-500 text-white font-semibold hover:bg-blue-600 active:bg-blue-700;
+}
+
+button.secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300 active:bg-gray-400;
+}
+
+/* Input fields */
+input,
+select,
+textarea {
+  @apply w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 outline-none;
+}
+
+/* Card style */
+.card {
+  @apply bg-white p-4 rounded-xl shadow-md;
+}
+
+/* Navbar styles */
+.navbar {
+  @apply flex items-center justify-between bg-white px-6 py-4 shadow-md fixed top-0 left-0 w-full;
+}
+
+.navbar a {
+  @apply text-gray-800 text-lg font-medium hover:text-blue-500 transition;
 }
