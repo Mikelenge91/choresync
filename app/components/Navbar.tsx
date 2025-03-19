@@ -43,6 +43,12 @@ export default function Navbar() {
         <Link href="/list" className="hover:text-blue-500">
           Chores Lists
         </Link>
+        <Link href="/login" className="hover:text-blue-500">
+          Login
+        </Link>
+        <Link href="/signup" className="hover:text-blue-500">
+          Signup
+        </Link>
       </div>
     </nav>
   );

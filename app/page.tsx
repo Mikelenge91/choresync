@@ -11,7 +11,9 @@ export default function Home() {
         all things chores management, whether it be taking care of pets,
         gardening, or regular household chores. Whatever your needs, we got you!
       </p>
-      <button className="rounded bg-teal-200">Learn More</button>
+      <button className="flex justify-center w-35  py-2 rounded bg-teal-200">
+        Learn More
+      </button>
     </div>
   );
 }
